@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
     standalone: true,
@@ -9,5 +9,9 @@ import { Component } from "@angular/core";
 })
 export class NewTaskComponent
 {
-    
+    @Output() cancel = new EventEmitter();
+
+    onCancel(){
+        this.cancel.emit();
+    }
 }
