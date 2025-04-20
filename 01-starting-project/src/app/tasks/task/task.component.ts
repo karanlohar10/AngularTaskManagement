@@ -17,6 +17,6 @@ export class TaskComponent {
   constructor(private tasksService: TasksService){}
 
   onCompleteTask(){
-    this.tasksService.completeTask(this.task.id);
+    this.tasksService.removeTask(this.task.id);
   }
 }

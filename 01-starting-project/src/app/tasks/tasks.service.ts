@@ -33,7 +33,7 @@ export class TasksService{
         return this.tasks.filter((task) => task.userId === userId);
     }
 
-    completeTask(taskId: string){
+    removeTask(taskId: string){
         this.tasks = this.tasks.filter((task) => task.id !== taskId);
     }
 
